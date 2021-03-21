@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+$mainFont: 'Open Sans',
+sans-serif;
+
+$HintofRed: #f6f2f2;
+$blackColor: #000000;
+$KashmirBlue: #e0e0e0;
+$CoralRed: #ff3f40;
+$RedOrange: #ff2d2d;
+$whiteColor: #ffffff;
+$GalleryColor: #ececec;
+$MineShaft: #f3f0de;
+$MercuryColor: #e5e5e5;
+$SecondBlack: #2d2d2d;
+$TheeBlack: #313030;
+$GrayColor: #b8b8b8;
+
+$fontWeight-B: 800;
+$fontWeight-E: 600;
+
+$fontSize-eS: 16px;
+$fontSize-S: 16.5px;
+$fontSize-S2: 18px;
+$fontSize-S3: 18.5px;
+$fontSize-eE2: 22px;
+$fontSize-eE: 24px;
+$fontSize-E3: 30.5px;
+$fontSize-E2: 41.5px;
+$fontSize-E: 42px;
+$fontSize-L: 60px;
+
+%mainTitle {
+    font-family: $mainFont;
+    font-size: $fontSize-L;
+    font-weight: $fontWeight-B;
+    line-height: 1.2;
+    letter-spacing: 6px;
+    color: $blackColor;
+    text-transform: uppercase;
+}
+
+%subTitle {
+    opacity: 0.8;
+    font-family: $mainFont;
+    font-size: $fontSize-E2;
+    font-weight: bold;
+    letter-spacing: 0.42px;
+    color: $blackColor;
+    text-transform: uppercase;
+}
+
+@mixin text($_fontSize, $_opasity:1) {
+    opacity: $_opasity;
+    font-family: $mainFont;
+    font-size: $_fontSize;
+    line-height: 1.73;
+    color: $blackColor;
+}
+
+@mixin buttonFilled($_pTopBot, $_pLeftRight) {
+    display: inline-block;
+    padding: $_pTopBot $_pLeftRight;
+    border-radius: 5px;
+    background: $RedOrange;
+    text-decoration: none;
+    font-family: $mainFont;
+    font-size: 18.5px;
+    font-weight: bold;
+    line-height: 1.84;
+    letter-spacing: 0.46px;
+    color: $whiteColor;
+    text-transform: none;
+    transition: 1s;
+    border: 2px solid $RedOrange;
+
+    &:hover {
+        color: $RedOrange;
+        background: $whiteColor;
+        transform: scale(1.1, 1.1);
+        border: 2px solid $RedOrange;
+    }
+}
+
+@mixin buttonUnfilled($_pTopBot, $_pLeftRight) {
+    display: inline-block;
+    padding: $_pTopBot $_pLeftRight;
+    border-radius: 5px;
+    background: transparent;
+    text-decoration: none;
+    font-family: $mainFont;
+    font-size: 18.5px;
+    font-weight: bold;
+    line-height: 1.84;
+    letter-spacing: 0.46px;
+    color: $RedOrange;
+    text-transform: none;
+    transition: 1s;
+    border: 2px solid $RedOrange;
+
+    &:hover {
+        color: $whiteColor;
+        background: $RedOrange;
+        transform: scale(1.1, 1.1);
+        border: 2px solid $RedOrange;
+    }
+}

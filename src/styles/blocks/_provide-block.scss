@@ -1,0 +1,23 @@
+.provide-block {
+
+    &__title {
+        opacity: 0.8;
+        font-family: $mainFont;
+        font-size: $fontSize-E;
+        font-weight: bold;
+        line-height: 1.3;
+        letter-spacing: 0.42px;
+        color: $blackColor;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+    }
+
+    &__text {
+        @include text($fontSize-eS);
+        margin-bottom: 50px;
+    }
+
+    &__link {
+        @include buttonUnfilled(15px, 70px);
+    }
+}

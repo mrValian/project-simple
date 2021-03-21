@@ -1,0 +1,33 @@
+.card-product {
+    padding-top: 50px;
+
+    &__title {
+        opacity: 0.7;
+        font-family: $mainFont;
+        font-size: $fontSize-eE;
+        font-weight: $fontWeight-E;
+        letter-spacing: 0.24px;
+        color: $blackColor;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        @include text($fontSize-eS, .7);
+    }
+
+    &:nth-child(1) {
+        background: url(../images/goods-icon/Settings.png) no-repeat top left;
+    }
+
+    &:nth-child(2) {
+        background: url(../images/goods-icon/Pencil.png) no-repeat top left;
+    }
+
+    &:nth-child(3) {
+        background: url(../images/goods-icon/Diamond.png) no-repeat top left;
+    }
+
+    &:nth-child(4) {
+        background: url(../images/goods-icon/Truck2.png) no-repeat top left;
+    }
+}
